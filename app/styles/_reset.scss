@@ -1,0 +1,32 @@
+html, body{
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+
+    &:active,
+    &:focus{
+        text-decoration: none;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.bn_topbar a:hover{
+    text-decoration: none;
+}
+input {
+    /*-webkit-appearance:none;*/
+    box-sizing: border-box;
+}

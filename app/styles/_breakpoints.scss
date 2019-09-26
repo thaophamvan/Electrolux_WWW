@@ -1,0 +1,20 @@
+$SCREEN_XS: 320px;
+$SCREEN_S-MAX: 599px;
+$SCREEN_XM-MIN: 600px;
+$SCREEN_XM-MAX: 648px;
+$SCREEN_M-MAX: 1024px;
+$SCREEN_SL-MAX: 1125px;
+$SCREEN_L-MIN: 1025px;
+$SCREEN_XL-MIN: 1600px;
+
+$SCREEN_TABLET_PORTRAIT-MAX: 902px;
+
+$MQ_XS:  "only screen and (max-width: $SCREEN_XS)";
+$MQ_S:  "only screen and (max-width: $SCREEN_S-MAX)";
+$MQ_S-M:  "only screen and (max-width: $SCREEN_M-MAX)";
+$MQ_XM: "only screen and (min-width: $SCREEN_XM-MIN) and (max-width: $SCREEN_XM-MAX)";
+$MQ_M: "only screen and (min-width: $SCREEN_XM-MIN) and (max-width: $SCREEN_M-MAX)";
+$MQ_M-L: "only screen and (min-width: $SCREEN_XM-MIN)";
+$MQ_SL: "only screen and (min-width: $SCREEN_L-MIN) and (max-width: $SCREEN_SL-MAX)";
+$MQ_L: "only screen and (min-width: $SCREEN_L-MIN)";
+$MQ_XL: "only screen and (min-width: $SCREEN_XL-MIN)";

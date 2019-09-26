@@ -1,0 +1,26 @@
+.hidden {
+    display: none !important;
+}
+
+.elec_reset-list-style {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin elec_display_flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+@mixin elect_user-unselect-text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.elect_hide-mobile {
+    display: none;
+}
