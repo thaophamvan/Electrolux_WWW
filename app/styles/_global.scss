@@ -1,0 +1,406 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic,200);
+html{
+    height: 100%;
+}
+ul {
+    &.no-bullet {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+* {
+    outline: none;
+}
+a{
+    @include transition(0.3s);
+    color: $text-color;
+}
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+// Typo
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.white-bg {
+    background: white;
+}
+
+.changetobg {
+    display: none !important;
+    @include xs {
+        display: block !important;
+    }
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+.tac {
+    text-align: center;
+}
+
+input {
+    border-radius: 0;
+}
+
+.tdu {
+    text-decoration: underline !important;
+}
+
+.cup {
+    cursor: pointer;
+}
+
+.ttu {
+    text-transform: uppercase;
+}
+
+.cud {
+    cursor: default !important;
+}
+
+.psr {
+    position: relative;
+}
+
+.dtable {
+    display: table;
+    width: 100%;
+}
+
+.dtable-cell {
+    display: table-cell;
+    float: none;
+}
+.pss {
+    position: static;
+}
+
+p {
+    line-height: 1.3;
+}
+.main p{
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+.p {
+    p {
+        font-size: 16px;
+        @include xs {
+            font-size: 14px;
+        }
+    }
+    &.big {
+        p {
+            font-size: 18px;
+            @include xs {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+input,
+textarea {
+    outline: none !important;
+    padding: 0 10px;
+}
+
+.button {}
+
+.gl-input {
+    outline: none;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000000;
+    padding: 0 10px;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.style-select {
+    width: 100%;
+    position: relative;
+    height: 61px;
+    .form-control{
+      overflow: hidden;
+    }
+    .dropdown-toggle {
+        width: 35px;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+        background: white;
+        height: 61px;
+        display: block;
+        z-index: 10;
+        pointer-events: none;
+        @include border-radius(0 4px 4px 0);
+        cursor: pointer;
+        i {
+            font-size: 20px;
+            color: $text-color;
+            position: absolute;
+            top: 18px;
+            right: 17px;
+            z-index: 20;
+        }
+    }
+    input {
+        width: 100%;
+        text-align: left;
+    }
+    .dropdown-menu{
+        width: 100%;
+        li a:hover{
+            background: $body-bg;
+        }
+    }
+}
+.checkbox-style{
+  label.checkbox{
+    font-size: 14px;
+    text-align: left!important;
+    padding-left: 34px;
+    line-height: 21px;
+    margin-top: 3px;
+    color: $gray-darker2;
+  }
+  .checkbox {
+    line-height: 14px;
+    > span { 
+        border: 1px solid $gray-darker2;
+        display: inline-block;
+        @include size(22px);
+        left: 0;
+        position: absolute;
+        background: $gray-darker2;
+        i{    
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          width: 20px;
+          margin-left: 0;
+          top: -8px;
+          opacity: 0;
+          color: white;
+        }
+    }
+    input{
+      margin-left: -45px;
+      margin-right: 10px;
+    }
+    > input:checked + span i {
+        opacity: 1;
+    }
+  }
+}
+.style-radio{
+    margin-right: 40px;
+  .inline{
+      display: inline-block;
+      margin-right: 20px;
+      &+ .inline{
+          margin-left:15px;
+        }
+    }
+    .radio{
+      color:$gray-darker2;
+      font-size:14px;
+      position:relative;
+      span{
+          position:relative;
+           padding-left:32px;
+           &:after{
+              content:'';
+              @include size(22px);
+              border:1px solid $gray-darker2;
+              position:absolute;
+              left:0;
+              top:-2px;
+              border-radius:100%;
+              -ms-border-radius:100%;
+              -moz-border-radius:100%;
+              -webkit-border-radius:100%;
+              box-sizing:border-box;
+              -ms-box-sizing:border-box;
+              -moz-box-sizing:border-box;
+              -webkit-box-sizing:border-box;
+            }
+        }
+        input[type="radio"]{
+           cursor: pointer; 
+          position:absolute;
+          width:100%;
+          height:100%;
+          z-index: 1;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+        }
+        input[type="radio"]:checked + span{
+          color:$gray-darker2;  
+        }
+        input[type="radio"]:checked + span:before{
+            content:'';
+          @include size(10px);
+          position:absolute;
+          background:$green;
+          left:6px;
+          top:4px;
+          border-radius:100%;
+          -ms-border-radius:100%;
+          -moz-border-radius:100%;
+          -webkit-border-radius:100%;
+        }
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    .ifr-poster {
+        .device & {
+            display: none;
+        }
+    }
+    .ifr-poster,
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate2D(-50%,
+        -50%);
+        background: url('../images/play.png');
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        .device & {
+            display: none;
+        }
+    }
+    .video-time {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        line-height: 1.2;
+        padding: 0px 5px;
+        background-color: black;
+        color: white;
+        .device & {
+            display: none;
+        }
+    }
+}
+
+// Button
+button,
+.button {}
+
+.w100p {
+    width: 100%;
+}
+
+.anchor {
+    content: '';
+    display: block;
+    height: $heightHeader + 10px;
+    margin-top: -($heightHeader + 10px);
+    visibility: hidden;
+    @include device {
+        margin-top: 0;
+        height: 0;
+    }
+}
+
+.mb0 {
+    margin-bottom: 0 !important;
+}
+.row-left-wrap {
+    > [class^=col-]{ 
+        float: right;}
+}
+.row-medium{
+    margin-left: -10px;
+    margin-right: -10px;
+    > [class^=col-] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.row-small{
+    margin-left: -5px;
+    margin-right: -5px;
+    > [class^=col-] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+.dropdown-menu{
+    @include border-radius(0);
+    @include box-shadow(none);
+    > li > a{
+        line-height: 36px;
+    }
+}
+.media{
+  @include xs{
+    display: block;
+  }
+  .media-left, .media-right, .media-body{
+    @include xs{
+        display: block;
+        width: 100%;
+    }
+  }
+}
+.img-responsive{
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+.mark-layer{
+    @include xs{
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 99;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        display: none;
+        &.in{
+            display: block;
+        }
+    }
+}

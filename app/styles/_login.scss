@@ -1,0 +1,29 @@
+.login {
+	background: url("../../images/background-login.jpg") no-repeat center bottom;
+	background-size: cover;
+	.login-popup{
+		width: 440px;
+		@include border-radius(3px);
+		background: rgba(47, 47, 47, 0.8);
+		margin-top: 130px;
+		padding: 60px 69px 93px;
+		.form-login-heading{
+			font-size: 18.5px;
+			font-family: $met;
+			text-transform: uppercase;
+			color: $white-smook;
+			margin: 46px 0 26px;
+		}
+		a{
+			color: white;
+			margin-top: 4px;
+			display: block;
+		}
+		.btn{
+			width: 100%;
+		}
+	}
+	footer{
+		background: transparent;
+	}
+}

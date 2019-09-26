@@ -1,0 +1,161 @@
+header{
+	background: white;
+	height: 98px;
+	@include xs{
+		height: 54px;
+		background: transparent;
+	}
+	.navbar{
+		z-index: 100;
+	}
+	.navbar-brand{
+		height: auto;
+		margin-right: 43px;
+		padding-left: 0;
+		@include xs{
+			float: none;
+			margin: auto;
+			width: 73px;
+			display: block;
+			padding-top: 12px;
+			padding-bottom: 5px;
+		}
+		img{
+			max-width: 73px;
+		}
+	}
+	.navbar-toggle{
+		float: left;
+		@include xs{
+			background: transparent;
+		    border: medium none!important;
+		    margin: 0;
+		    padding: 20px 15px;
+		    &:hover, &:focus{
+		    	background: white!important;
+		    }
+		}
+	}
+	.search-icon{
+		background: url("../images/icon/search-icon.png") no-repeat center;
+		@include size(21px);
+		margin-top: 18px;
+		margin-right: 13px;
+		background-size: cover;
+	}
+	.navbar-collapse{
+		padding-top: 22px;
+		.navbar-nav {
+			@include xs{
+				margin: 0;
+				margin-left: 15px;
+			}
+			> li {
+				position: relative;
+				&:after{
+					position: absolute;
+					content: "|";
+					right: 0;
+					top: 5px;
+					color: $orange-gray;
+					font-family: $met;
+					@include xs{
+						content: "";
+					}
+				}
+				> a{
+					color: $orange-gray;
+					font-size: 13px;
+					font-weight: normal;
+					text-transform: uppercase;
+					font-family: $met;
+					@include xs{
+						padding-left: 0;
+					}
+				}
+			}
+			> li:last-child {
+				&:after{
+					content: "";
+				}
+			}
+			.userMenu{
+				&:after{
+					font-size: 28px;
+					top: 8px;
+				}
+			}
+			> .active > a, > .active > a:hover, > .active > a:focus{
+				background: none;
+				color: $orange-gray;
+			}
+			.avatar{
+				display: block;
+				@include border-radius(26px);
+				overflow: hidden;
+				padding: 0;
+				margin-right: 10px;
+				margin-top: 3px;
+			}
+			.user{
+				padding-right: 15px;
+				padding-top: 12px;
+				a{
+					font-family: $met;
+					color: $orange-gray;
+					font-size: 14px;
+				}
+				p{
+					font-size: 13px;
+					font-family: $met; 
+					color: $text-color;
+					margin-top: -3px;
+				}
+				.dropdown-menu{
+					top: 40px;
+				}
+			}
+			.dropdown-menu{
+				@include xs{
+					margin: 0 -15px;
+					li a:hover{
+						background: $white-smook!important;
+						font-weight: bold;
+					}
+	    		}
+			}
+		}
+		.navbar-right{
+			.language{
+				margin:10px -4px 0 12px;
+				@include xs{
+					margin-left: 62px;
+				}
+				a {
+					font-size: 13px;
+					line-height: 26px;
+					img{
+						width: 23px;
+						margin: 5px 11px 0 0;
+					}
+				}
+				.caret{
+					margin-left: 9px;
+				}
+				.dropdown-menu{
+					@include xs{
+						margin: 0 -11px 0 -15px;
+					}
+				}
+			}
+			&.visible-xs{
+				border-bottom: 3px solid $white-smook;
+				padding-bottom: 15px;
+				margin-bottom: 15px;
+			}
+			.dropdown-menu{
+				top: 34px;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+mixin list
+	ul
+		li.class this is li
+		li.class this is li
+		li.class this is li
+mixin dropDown(defaultText, name)
+	.style-select
+		span= defaultText
+		select(required name= name)
+			option(value="")= defaultText
+			option(value="text2") text2
+			option(value="text3") text3
+mixin videoIframe(iframeEmbed, poster)
+	.video-wrapper
+		iframe(src=iframeEmbed, frameborder="0", allowfullscreen)
+		.ifr-poster
+			img(src=poster, alt="")
+		.play-btn
+		.video-time

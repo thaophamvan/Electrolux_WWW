@@ -1,0 +1,47 @@
+.navbar-default{
+	background: none;
+	border: none;
+	min-height: auto;
+	margin-bottom: 0;
+}
+
+.form-control{
+	border: none;
+	@include border-radius(0);
+}
+.btn{
+	border: none;
+	padding: 8px 12px;
+	@include border-radius(2px);
+	@include xs{
+		width: 100%;
+	}
+}
+.btn-default{
+	background: $brown;
+	color: white;
+}
+.btn-primary{
+	background: $red-light;
+	color: white;
+	padding: 20px 41px;
+	font-size: 15px;
+	@include border-radius(2px);
+	&:hover, &:focus, &.focus, &:active{
+		background: $red-light;
+		border: none;
+	}
+}
+
+.form-control{
+	border: none;
+	@include border-radius(0);
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	background: none;
+}
+.slick-initialized .slick-slide{
+	display: inline-block;
+	float: none;
+	vertical-align: middle;
+}

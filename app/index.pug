@@ -1,0 +1,169 @@
+extends layouts/default
+
+block content
+	.home.main
+		.main.container#core
+			h3
+				i.fa.fa-share-alt 
+				|Quy trình hướng nghiệp bao gồm 5 bước
+			.row
+				.col-md-6.col-12
+					section.content-main
+						h4
+							i.fa.fa-user-secret
+							|Nhận biết năng lực của bản thân
+						.media
+							.mr-md-3
+								a(href="#")
+									img.media-object.img-responsive(src="images/2.jpg" alt="...")
+							.media-body
+								h4.mt-0 mediaheader
+								p Song hành cùng sự phát triển của đất nước, hội nhập toàn cầu. Thế hệ học sinh hiện tại và tương lai phải đứng trước sự lựa chọn ngành nghề rất đa dạng và mới mẻ. Trung tâm nghiên cứu và phát triển giáo dục Việt Nam sẽ giúp các em tìm hiểu và lựa chọn ngành nghề tương lai giúp phù hợp với năng lực bản thân, nhu cầu xã hội và giúp các em tìn được môi trường đào tạo lý tưởng nhất...
+						ul
+							li Trắc nghiện tính cách
+							li Trắc nghiện theo đối tượng lao động
+							li Trắc nghiện theo năng lực tư duy
+						button.btn.btn-default.btn-primary(type="button") Bắt đầu trải nghiệm
+				.col-md-6.col-12
+					section.content-main
+						h4
+							i.fa.fa-user-secret
+							|Nhận biết năng lực của bản thân
+						.media
+							.mr-md-3
+								a(href="#")
+									img.media-object.img-responsive(src="images/2.jpg" alt="...")
+							.media-body
+								h4.mt-0 mediaheader
+								p Song hành cùng sự phát triển của đất nước, hội nhập toàn cầu. Thế hệ học sinh hiện tại và tương lai phải đứng trước sự lựa chọn ngành nghề rất đa dạng và mới mẻ. Trung tâm nghiên cứu và phát triển giáo dục Việt Nam sẽ giúp các em tìm hiểu và lựa chọn ngành nghề tương lai giúp phù hợp với năng lực bản thân, nhu cầu xã hội và giúp các em tìn được môi trường đào tạo lý tưởng nhất...
+						ul
+							li Trắc nghiện tính cách
+							li Trắc nghiện theo đối tượng lao động
+							li Trắc nghiện theo năng lực tư duy
+						button.btn.btn-default.btn-primary(type="button") Bắt đầu trải nghiệm
+			.row
+				.slider.col-12
+					h4
+						i.fa.fa-thumbs-o-up 
+						|Đối tác của chúng tôi
+					.responsive
+						div
+							.slide-item(rel-name="numero-6" rel-info-name="numero-info-6" rel-type="numero")
+								img(src="images/1.jpg" alt="")
+						div
+							.slide-item(rel-name="numero-6" rel-info-name="numero-info-6" rel-type="numero")
+								img(src="images/1.jpg" alt="")
+				.slider.col-12
+					form.form-horizontal
+						.form-group
+							label.col-md-4.col-12.control-label.hidden-xs(for="") First name
+							.col-md-8.col-12
+								input.form-control(type="text" id="" placeholder="First name" name="username")
+						.form-group
+							.checkbox-style
+								label.checkbox
+									input(type="checkbox") 
+									span 
+										i.fa.fa-check 
+									|Sign up to newsletter
+						.form-group
+							.col-12
+								.button-content
+									button.btn(type="submit") Submit
+			.row
+				.col-md-12
+					table.table.table-hover
+						thead
+							tr
+								th #
+								th First Name
+								th Last Name
+								th Username
+						tbody
+							tr
+								th(scope="row") 1
+								td Mark
+								td Otto
+								td @mdo
+							tr
+								th(scope="row") 1
+								td Mark
+								td Otto
+								td @mdo
+			.style-select
+				a.dropdown-toggle(href="javascript:void(0);")
+				button.form-control.text-left(type="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") select
+				ul.dropdown-menu
+					li         
+						a(href="javascript:void(0);") itemname
+			.style-radio.pull-right
+				label.radio.inline
+					input(type="radio" name="Miles" value="Miles" ng-model="searchRequestData.location.unit")
+					span Miles
+				label.radio.inline
+					input(type="radio" name="Kilometers" value="Kilometers" ng-model="searchRequestData.location.unit")
+					span Kilometers 
+			.tabs-control
+				.container
+					ul.nav-tabs.clearfix(role="tablist")
+						li.active.detail(role="presentation" data-id="#chooseRoom")
+							a(href="#detail" aria-controls="home" role="tab")
+								i.icon-tabs.icon-detail
+								| Detail
+						li.location(role="presentation" data-id="#location2")
+							a(href="#location" aria-controls="home" role="tab")
+								i.icon-tabs.icon-location
+								| Location
+						li.restaurants(role="presentation")
+							a(href="#restaurants" aria-controls="home" role="tab")
+								i.icon-tabs.icon-restaurant
+								|Restaurants
+						li.meetings(role="presentation")
+							a(href="#meetings" aria-controls="home" role="tab")
+								i.icon-tabs.icon-meeting
+								|Meetings
+						li.weddings(role="presentation")
+							a(href="#weddings" aria-controls="home" role="tab")
+								i.icon-tabs.icon-wedding
+								|Weddings
+				.tab-content
+					.header-tab.active(role="presentation" data-id="#chooseRoom")
+						a(href="javascript:void(0);" aria-controls="home" role="tab")
+							i.icon-tabs.icon-detail
+							| Detail
+							i.fa.fa-angle-down
+							i.fa.fa-angle-up
+					.tab-pane.active#detail(role="tabpanel")
+						| detail-tabs
+					.header-tab(role="presentation" data-id="#location2")
+						a(href="javascript:void(0);" aria-controls="home" role="tab")
+							i.icon-tabs.icon-location
+							| Location
+							i.fa.fa-angle-down
+							i.fa.fa-angle-up
+					.tab-pane#location(role="tabpanel")
+						| location-tabs
+					.header-tab(role="presentation")
+						a(href="javascript:void(0);" aria-controls="home" role="tab")
+							i.icon-tabs.icon-restaurant
+							| Restaurants
+							i.fa.fa-angle-down
+							i.fa.fa-angle-up
+					.tab-pane#restaurants(role="tabpanel")
+						| restaurant-tabs
+					.header-tab(role="presentation")
+						a(href="javascript:void(0);" aria-controls="home" role="tab")
+							i.icon-tabs.icon-meeting
+							| Meetings
+							i.fa.fa-angle-down
+							i.fa.fa-angle-up
+					.tab-pane#meetings(role="tabpanel")
+						| meetings-tabs
+					.header-tab(role="presentation")
+						a(href="javascript:void(0);" aria-controls="home" role="tab")
+							i.icon-tabs.icon-wedding
+							| Weddings
+							i.fa.fa-angle-down
+							i.fa.fa-angle-up
+					.tab-pane#weddings(role="tabpanel")
+						| wedding-tabs 
